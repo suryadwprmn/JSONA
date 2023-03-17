@@ -9,18 +9,18 @@ import java.util.Scanner;
 public class ConnectURI {
     //pembuatan JSON
     private final String USER_AGENT = "mozilla/5.0";
-    public static URL buildURL(String urlQuey){
+    public static URL buildURL(String urlQuery){
         URL url = null;
         try {
-            url = new URL(urlQuey.toString());
+            url = new URL(urlQuery.toString());
         } catch (MalformedURLException e){
             e.printStackTrace();
         }
         return url;
     }
 
-    public static String getResponseFromHttpUrl(URL url) throws IOException{
-        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+    public static String getResponseFromHttpurl(URL url) throws IOException{
+        HttpURLConnection urlConnection = (HttpURLConnection)url.openConnection();
         try {
             InputStream in = urlConnection.getInputStream();
             Scanner scanner = new Scanner(System.in);
